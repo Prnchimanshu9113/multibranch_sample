@@ -11,8 +11,10 @@ pipeline {
         }
          stage("Change Readme.md"){
             steps{
-                when { branch "fix" }
+                if (branch "fix") 
+                {
                 sh 'cat README.md'
+                }
             }
         }
 }
