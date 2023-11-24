@@ -9,5 +9,11 @@ pipeline {
                 echo 'Hello-World'
             }
         }
+         stage("Change Readme.md"){
+            steps{
+                when { branch fix* }
+                sh 'cat README.md'
+            }
+        }
 }
 }
