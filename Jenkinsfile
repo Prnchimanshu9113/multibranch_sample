@@ -11,11 +11,9 @@ pipeline {
         }
          stage("Change Readme.md"){
             steps{
-                def branch = "fix"
-                if (branch == "fix") 
-                {
-                sh 'cat README.md'
-                }
+                
+               sh 'cat README.md'
+                
             }
         }
 }
